@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Py_One</title>
+  <title>git常用操作 | Py_One</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="front-end note">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Py_One">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1. 撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次) 2.撤销commit，回退所有内容到工作区123git reset HEAD^git reset —- app.js 3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4.撤销一次未push的com">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用操作">
+<meta property="og:url" content="http://yoursite.com/2018/09/12/git常用操作/index.html">
 <meta property="og:site_name" content="Py_One">
-<meta property="og:description" content="front-end note">
+<meta property="og:description" content="1. 撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次) 2.撤销commit，回退所有内容到工作区123git reset HEAD^git reset —- app.js 3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4.撤销一次未push的com">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-12T03:26:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Py_One">
-<meta name="twitter:description" content="front-end note">
+<meta name="twitter:title" content="git常用操作">
+<meta name="twitter:description" content="1. 撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次) 2.撤销commit，回退所有内容到工作区123git reset HEAD^git reset —- app.js 3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4.撤销一次未push的com">
   
     <link rel="alternative" href="/atom.xml" title="Py_One" type="application/atom+xml">
   
@@ -143,36 +145,61 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git常用操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/12/git常用操作/" class="archive-article-date">
-  	<time datetime="2018-09-12T03:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/12/git常用操作/">git常用操作</a>
+    <h1 class="article-title" itemprop="name">
+      git常用操作
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/09/12/git常用操作/" class="archive-article-date">
+  	<time datetime="2018-09-12T03:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="1-撤销一次未push的commit，并且本地修改直接返回到工作区"><a href="#1-撤销一次未push的commit，并且本地修改直接返回到工作区" class="headerlink" title="1. 撤销一次未push的commit，并且本地修改直接返回到工作区"></a>1. 撤销一次未push的commit，并且本地修改直接返回到工作区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset commit_id(前一次提交的id,不是本次)</span><br></pre></td></tr></table></figure>
+<h6 id="2-撤销commit，回退所有内容到工作区"><a href="#2-撤销commit，回退所有内容到工作区" class="headerlink" title="2.撤销commit，回退所有内容到工作区"></a>2.撤销commit，回退所有内容到工作区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^</span><br><span class="line"></span><br><span class="line">git reset —- app.js</span><br></pre></td></tr></table></figure>
+<h6 id="3-撤销commit，回退指定文件到工作区，未指定的保留在暂存区"><a href="#3-撤销commit，回退指定文件到工作区，未指定的保留在暂存区" class="headerlink" title="3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区"></a>3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^ app.js</span><br></pre></td></tr></table></figure>
+<h6 id="4-撤销一次未push的commit，并且本地修改保存在暂存区"><a href="#4-撤销一次未push的commit，并且本地修改保存在暂存区" class="headerlink" title="4.撤销一次未push的commit，并且本地修改保存在暂存区"></a>4.撤销一次未push的commit，并且本地修改保存在暂存区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset —soft HEAD^(或HEAD~3 )</span><br></pre></td></tr></table></figure>
+<h6 id="5-恢复一个被删除的commit"><a href="#5-恢复一个被删除的commit" class="headerlink" title="5.恢复一个被删除的commit"></a>5.恢复一个被删除的commit</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reflog  //找到被删除的commit_id</span><br><span class="line"></span><br><span class="line">git checkout -b 新分支 删除的commit_id //不对</span><br></pre></td></tr></table></figure>
+<h6 id="6-设置git-pull-git-fetch-git-rebase-设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置"><a href="#6-设置git-pull-git-fetch-git-rebase-设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置" class="headerlink" title="6.设置git pull = git fetch + git rebase 设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置"></a>6.设置git pull = git fetch + git rebase 设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global branch.autosetuprebase always</span><br><span class="line">git config --global branch.autosetuprebase 的值是 always  设置成功</span><br><span class="line">git config branch.master.rebase 的值是 true  设置成功</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,7 +211,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -197,17 +224,94 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/09/12/git常用操作/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -230,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

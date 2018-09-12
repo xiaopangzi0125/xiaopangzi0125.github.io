@@ -145,35 +145,32 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-git常用操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/11/hello-world/">Hello World</a>
+      <a class="article-title" href="/2018/09/12/git常用操作/">git常用操作</a>
     </h1>
   
 
         
-        <a href="/2018/09/11/hello-world/" class="archive-article-date">
-  	<time datetime="2018-09-11T15:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-11</time>
+        <a href="/2018/09/12/git常用操作/" class="archive-article-date">
+  	<time datetime="2018-09-12T03:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h6 id="1-撤销一次未push的commit，并且本地修改直接返回到工作区"><a href="#1-撤销一次未push的commit，并且本地修改直接返回到工作区" class="headerlink" title="1. 撤销一次未push的commit，并且本地修改直接返回到工作区"></a>1. 撤销一次未push的commit，并且本地修改直接返回到工作区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset commit_id(前一次提交的id,不是本次)</span><br></pre></td></tr></table></figure>
+<h6 id="2-撤销commit，回退所有内容到工作区"><a href="#2-撤销commit，回退所有内容到工作区" class="headerlink" title="2.撤销commit，回退所有内容到工作区"></a>2.撤销commit，回退所有内容到工作区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^</span><br><span class="line"></span><br><span class="line">git reset —- app.js</span><br></pre></td></tr></table></figure>
+<h6 id="3-撤销commit，回退指定文件到工作区，未指定的保留在暂存区"><a href="#3-撤销commit，回退指定文件到工作区，未指定的保留在暂存区" class="headerlink" title="3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区"></a>3.撤销commit，回退指定文件到工作区，未指定的保留在暂存区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^ app.js</span><br></pre></td></tr></table></figure>
+<h6 id="4-撤销一次未push的commit，并且本地修改保存在暂存区"><a href="#4-撤销一次未push的commit，并且本地修改保存在暂存区" class="headerlink" title="4.撤销一次未push的commit，并且本地修改保存在暂存区"></a>4.撤销一次未push的commit，并且本地修改保存在暂存区</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset —soft HEAD^(或HEAD~3 )</span><br></pre></td></tr></table></figure>
+<h6 id="5-恢复一个被删除的commit"><a href="#5-恢复一个被删除的commit" class="headerlink" title="5.恢复一个被删除的commit"></a>5.恢复一个被删除的commit</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reflog  //找到被删除的commit_id</span><br><span class="line"></span><br><span class="line">git checkout -b 新分支 删除的commit_id //不对</span><br></pre></td></tr></table></figure>
+<h6 id="6-设置git-pull-git-fetch-git-rebase-设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置"><a href="#6-设置git-pull-git-fetch-git-rebase-设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置" class="headerlink" title="6.设置git pull = git fetch + git rebase 设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置"></a>6.设置git pull = git fetch + git rebase 设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global branch.autosetuprebase always</span><br><span class="line">git config --global branch.autosetuprebase 的值是 always  设置成功</span><br><span class="line">git config branch.master.rebase 的值是 true  设置成功</span><br></pre></td></tr></table></figure>
 
       
 
@@ -182,11 +179,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Git//" class="article-tag-list-link color4">Git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/11/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/09/12/git常用操作/">展开全文 >></a>
         </p>
       
 
@@ -307,6 +326,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
