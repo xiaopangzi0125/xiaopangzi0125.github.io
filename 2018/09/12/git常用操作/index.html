@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>git常用操作 | Py_One</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次) 2、 撤销commit，回退所有内容到工作区12git reset HEAD^git reset —- app.js 3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4、 撤销一次未push的com">
+  <meta name="description" content="撤销commit：1、撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次)   2、 撤销commit，回退所有内容到工作区12git reset HEAD^git reset —- app.js 3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4、 撤">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用操作">
 <meta property="og:url" content="http://yoursite.com/2018/09/12/git常用操作/index.html">
 <meta property="og:site_name" content="Py_One">
-<meta property="og:description" content="1、撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次) 2、 撤销commit，回退所有内容到工作区12git reset HEAD^git reset —- app.js 3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4、 撤销一次未push的com">
+<meta property="og:description" content="撤销commit：1、撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次)   2、 撤销commit，回退所有内容到工作区12git reset HEAD^git reset —- app.js 3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4、 撤">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-13T01:40:06.000Z">
+<meta property="og:updated_time" content="2018-09-13T01:49:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用操作">
-<meta name="twitter:description" content="1、撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次) 2、 撤销commit，回退所有内容到工作区12git reset HEAD^git reset —- app.js 3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4、 撤销一次未push的com">
+<meta name="twitter:description" content="撤销commit：1、撤销一次未push的commit，并且本地修改直接返回到工作区1git reset commit_id(前一次提交的id,不是本次)   2、 撤销commit，回退所有内容到工作区12git reset HEAD^git reset —- app.js 3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区1git reset HEAD^ app.js 4、 撤">
   
     <link rel="alternative" href="/atom.xml" title="Py_One" type="application/atom+xml">
   
@@ -165,12 +165,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、撤销一次未push的commit，并且本地修改直接返回到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset commit_id(前一次提交的id,不是本次)</span><br></pre></td></tr></table></figure></p>
+        <ul>
+<li>撤销commit：<br>1、撤销一次未push的commit，并且本地修改直接返回到工作区<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset commit_id(前一次提交的id,不是本次)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>2、 撤销commit，回退所有内容到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^</span><br><span class="line">git reset —- app.js</span><br></pre></td></tr></table></figure></p>
 <p>3、撤销commit，回退指定文件到工作区，未指定的保留在暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD^ app.js</span><br></pre></td></tr></table></figure></p>
 <p>4、 撤销一次未push的commit，并且本地修改保存在暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset —soft HEAD^(或HEAD~3 )</span><br></pre></td></tr></table></figure></p>
 <p>5、 恢复一个被删除的commit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reflog  //找到被删除的commit_id</span><br><span class="line"></span><br><span class="line">git checkout -b 新分支 删除的commit_id //不对</span><br></pre></td></tr></table></figure></p>
-<p>6、 设置git pull = git fetch + git rebase 设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global branch.autosetuprebase always</span><br><span class="line">git config --global branch.autosetuprebase 的值是 always  设置成功</span><br><span class="line">git config branch.master.rebase 的值是 true  设置成功</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>设置git pull = git fetch + git rebase<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">说明：设置的对所有新建的分支有效，全局的。但是对已经建好的分支就不行，需要重新设置</span><br><span class="line">git config --global branch.autosetuprebase always</span><br><span class="line">git config --global branch.autosetuprebase 的值是 always  设置成功</span><br><span class="line">git config branch.master.rebase 的值是 true  设置成功</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
 
